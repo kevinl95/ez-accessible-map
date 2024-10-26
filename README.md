@@ -42,8 +42,8 @@ To deploy this project locally, follow these steps:
 1. **Clone the repository** (or download the files):
 
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/kevinl95/ez-accessible-map
+   cd ez-accessible-map
    ```
 
 2. **Install required Python packages**:
