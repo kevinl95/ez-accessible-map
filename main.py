@@ -93,7 +93,7 @@ for index, row in df.iterrows():
     georeference = row['georeference']
     company = row['company']
     location = parse_georeference(georeference)
-    
+
     if location:
         lat, lon = location
         # Get the Place ID for the closest business
@@ -121,6 +121,16 @@ for index, row in df.iterrows():
                     popup=f"<strong>{company}</strong><br>Wheelchair Accessible",
                     icon=folium.Icon(color='green', icon='info-sign')
                 ).add_to(m)
+
+# Add custom HTML for the attribution
+attribution_html = '''
+<div style="position: fixed; bottom: 10px; left: 10px; background: white; 
+            padding: 5px; border: 1px solid black; z-index: 9999;">
+    Places data &copy; <a href="https://maps.google.com">Google</a>
+</div>
+'''
+m.get_root().html.add_child(folium.Element(attribution_html))
+
 # Save the map as an HTML file
 filename = "./output/index.html"
 os.makedirs(os.path.dirname(filename), exist_ok=True)
