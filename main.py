@@ -100,12 +100,12 @@ for index, row in df.iterrows():
         closest_place_id = get_closest_place(lat, lon, api_key)
         if closest_place_id:
             accessibility_info = get_accessibility_data(closest_place_id, api_key)
-            if accessibility_info:
+            if accessibility_info == "No accessibility information available":
                 # Add marker to the map with a popup showing the company name and accessibility info
                 folium.Marker(
                     location=location,
-                    popup=f"<strong>{company}</strong><br>Wheelchair Accessible",
-                    icon=folium.Icon(color='blue', icon='info-sign')
+                    popup=f"<strong>{company}</strong><br>Accessibility Unknown",
+                    icon=folium.Icon(color='orange', icon='info-sign')
                 ).add_to(m)
             elif not accessibility_info:
                 # Add marker to the map with a popup showing the company name and accessibility info
@@ -118,10 +118,9 @@ for index, row in df.iterrows():
                 # Add marker to the map with a popup showing the company name and accessibility info
                 folium.Marker(
                     location=location,
-                    popup=f"<strong>{company}</strong><br>Accessibility Unknown",
-                    icon=folium.Icon(color='orange', icon='info-sign')
+                    popup=f"<strong>{company}</strong><br>Wheelchair Accessible",
+                    icon=folium.Icon(color='blue', icon='info-sign')
                 ).add_to(m)
-
 # Save the map as an HTML file
 filename = "./output/index.html"
 os.makedirs(os.path.dirname(filename), exist_ok=True)
