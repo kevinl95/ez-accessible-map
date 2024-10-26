@@ -124,6 +124,4 @@ for index, row in df.iterrows():
                 ).add_to(m)
 
 # Save the map as an HTML file
-m.save('company_map.html')
-
-print("Map created and saved as 'company_map.html'")
+m.save('index.html')

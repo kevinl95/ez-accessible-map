@@ -11,6 +11,7 @@ company_data.csv
 
 # Outputs
 company_map.html
+index.html
 
 # Distribution / packaging
 .Python
