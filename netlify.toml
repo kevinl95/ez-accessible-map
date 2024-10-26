@@ -1,2 +1,2 @@
 [template.environment]
-  GOOGLE_PLACES_API_KEY = "Change me to your Google Places API token"
+  GOOGLE_PLACES_API_KEY = "Paste your Google Places API token"

@@ -10,6 +10,8 @@ This project is an interactive map showcasing MTA E-ZPass retailers based on the
 
 ## Project Overview
 
+![Screenshot of a map showing E-ZPass Retailers](./screenshot.png)
+
 This project uses the [MTA E-ZPass Retailers Locations](https://data.ny.gov/Transportation/MTA-E-ZPass-Retailers-Locations/y59h-w6v4) dataset and information from the Google Places API to create an interactive map of retailers based on their accessibility. Using Python and libraries like Folium and Pandas the data is read, a new dataset is produced by combining it with the information we retrieve by looking up businesses with the Google Places API and extracting accessibility information, and then an interactive map is generated that you can view on the web. This map is color coded:
 
 - Red means the location is not accessible for wheelchair users
