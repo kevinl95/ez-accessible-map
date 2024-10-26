@@ -119,7 +119,7 @@ for index, row in df.iterrows():
                 folium.Marker(
                     location=location,
                     popup=f"<strong>{company}</strong><br>Wheelchair Accessible",
-                    icon=folium.Icon(color='blue', icon='info-sign')
+                    icon=folium.Icon(color='green', icon='info-sign')
                 ).add_to(m)
 # Save the map as an HTML file
 filename = "./output/index.html"
