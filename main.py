@@ -96,19 +96,18 @@ for index, row in df.iterrows():
     
     if location:
         lat, lon = location
-        
         # Get the Place ID for the closest business
         closest_place_id = get_closest_place(lat, lon, api_key)
         if closest_place_id:
             accessibility_info = get_accessibility_data(closest_place_id, api_key)
-            if "True" in accessibility_info:
+            if accessibility_info:
                 # Add marker to the map with a popup showing the company name and accessibility info
                 folium.Marker(
                     location=location,
                     popup=f"<strong>{company}</strong><br>Wheelchair Accessible",
                     icon=folium.Icon(color='blue', icon='info-sign')
                 ).add_to(m)
-            elif "False" in accessibility_info:
+            elif not accessibility_info:
                 # Add marker to the map with a popup showing the company name and accessibility info
                 folium.Marker(
                     location=location,
