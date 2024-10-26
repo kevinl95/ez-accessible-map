@@ -2,7 +2,7 @@
 
 [Check out the free online demo](https://ezpassaccessiblemap.netlify.app/)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://github.com/kevinl95/ez-accessible-map)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kevinl95/ez-accessible-map)
 
 # Interactive Map of MTA E-ZPass Retailers by Accessibility
 
