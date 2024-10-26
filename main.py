@@ -124,4 +124,7 @@ for index, row in df.iterrows():
                 ).add_to(m)
 
 # Save the map as an HTML file
-m.save('index.html')
+filename = "./output/index.html"
+os.makedirs(os.path.dirname(filename), exist_ok=True)
+
+m.save(filename)
