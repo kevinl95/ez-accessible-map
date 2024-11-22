@@ -1,5 +1,7 @@
 ![EZ Accessible Map - Free Web App logo](./logo.png)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/792636fc-1bba-4aed-af6c-5f2363417cba/deploy-status)](https://app.netlify.com/sites/ezpassaccessiblemap/deploys)
+
 [Check out the free online demo](https://ezpassaccessiblemap.netlify.app/)
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kevinl95/ez-accessible-map)
