@@ -1,2 +1,5 @@
+[build]
+  command = "python main"
+  publish = "output"
 [template.environment]
   GOOGLE_PLACES_API_KEY = "Paste your Google Places API token"
